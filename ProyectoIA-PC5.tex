@@ -1,15 +1,162 @@
-\documentclass{article}
+%\documentclass[11pt,twocolumn,spanish]{article} 
+\documentclass[10pt,twocolumn]{article}
+\usepackage[spanish,english]{babel}
+\usepackage{indentfirst}
+\usepackage{anysize} % Soporte para el comando \marginsize
+%\marginsize{1.5cm}{1.5cm}{0.5cm}{1cm}
+\marginsize{2,5cm}{1,8cm}{1.5cm}{1,7cm}
+\usepackage[psamsfonts]{amssymb}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{multirow} 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tocloft}
+\usepackage{natbib}
+\usepackage[spanish,es-tabla]{babel}
 \usepackage[utf8]{inputenc}
-
-\title{Como generar texto, utilizando diferentes métodos de decodificación, para la generación de lenguajes con trasnformadores}
-\author{Cerna Espiritu, Roberto Alexis \\ Oliva Valdivia, Abel Alejandro \\ Vargas Torres, Eros Aylthon \\ Ventocilla Tamara, Franz Rony \\ Yacolca Huamán, Jesús Miguel  }
-\date{July 2021}
+\usepackage{subcaption}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand*\contentsname{Summary}
+\renewcommand{\thepage}{}
+\theoremstyle{definition}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \begin{document}
+	
+\begin{center}
+	%\textbf{Curso:}\\
+	\vspace{5pt}
+	{\large \textbf{COMO GENERAR TEXTO, UTILIZANDO DIFERENTES MÉTODOS DE DECODIFICACIÓN, PARA LA GENERACIÓN DE LENGUAJES CON TRANSFORMADORES}}\\
+	%{\large \textbf{Laboratorio 1} }\\
+\end{center}
 
-\maketitle
+\begin{center}
+	Students:\\
+	\vspace{5pt}
+	Universidad Nacional de Ingeniería\\
+	\vspace{5pt}
+	{\large Roberto Alexis Cerna Espiritu }\\
+	e-mail: roberto.cerna.e@uni.pe\\
+	{\large Abel Alejandro Oliva Valdivia }\\
+	e-mail: abel.oliva.v@uni.pe\\
+	{\large Franz Rony Ventocilla Tamara }\\
+	e-mail: fventocillat@uni.pe\\
+	{\large Jesús Miguel Yacolca Huamán }\\
+	e-mail: jyacolcah@uni.pe\\
+	{\large Eros Aylthon Vargas Torres }\\
+	e-mail: evargast@uni.pe\\
+	
+\end{center}
+\vspace{5pt}
+%\begin{center}
+%	Curso:\\
+%	\vspace{5pt}
+%	{\large CC0A2 Programación de Dispositivos Móviles}\\
+%	{\large Laboratorio 1}\\
+%\end{center}
+\vspace{20pt}
+\begin{abstract}
+{\small
+\hspace*{0.5cm}
 
-\section{Introduction}
-En el presente proyecto definiremos previamente los conceptos necesarios para el entendimiento del proyecto en general , ademas de mostrar y explicar todo el proceso realizado en la implementación de este proyecto, agregando las diversas tecnologias que hemos utilizado.
+%[Abstract]\\
 
+
+\\
+In the following research work an analysis is carried out about cryptocurrencies. In the first place, a contextualization of the origin and of cryptocurrencies and their evolution is carried out, in addition to knowing all the steps that lead to their creation. It also focuses on analyzing the different classes of cryptocurrencies, and clarifying how they are seen by the people and the government. Later an exploration will be carried out on the operation of Bitcoin, in addition to discussing its advantages, disadvantages and how its value fluctuates as well as giving an explanation of why or why you should not invest in cryptocurrencies
+
+\textbf{Keywords:} cryptocurrency, Bitcoin, Commodity, Blockchain, Currency, Miner
+}
+\end{abstract}
+
+\pagenumbering{arabic}
+
+\tableofcontents
+
+\vspace{20pt}
+\hrule
+\vspace{10pt}
+
+%\newpage      comienzo     \section{Resumen}
+
+
+\section{Introducción}
+
+\subsection{Presentación}
+\begin{itemize}
+    \item dsdsdsds
+
+   
+\end{itemize}
+
+\subsection{Objetivos}
+
+\begin{itemize}
+    \item Especial interés en conocer más sobre criptomonedas, en especial el Bitcoin
+    \item El sector financiero me resulta realmente atrayente en si. Primero por la forma que tiene de afectar a las vidas de las personas. El sector financiero es uno de los pilares mas fuertes sobre los que se asienta la economía y la forma que tiene de afectar a los países es sin duda sobrecogedora.
+    \item Esta nueva tecnología en auge tiene ciertos riesgos, ciertas ventajas y ciertas desventajas que no todo el mundo entiende todavía, la posibilidad de poder estudiarlas es sin duda una ventaja muy aprovechable para poder sacar partido de esta nueva aventura, que son las criptomonedas.
+    \item La llegada de las criptomonedas al mercado está suponiendo un terremoto. Una forma completamente nueva de entender el más básico de los pasos a la hora de comerciar: El intercambio monetario.
+\end{itemize}
+
+\subsection{Organización del informe}
+Es importante entender la importancia del bitcoin y su influencia en un mundo que se está digitalizando cada vez más. Como toda tecnología nueva, hay personas que la usan para el bien o el mal. Pero el primer paso es entender la tecnología y cómo te beneficia en tu día a día.
+
+\subsection{Estado del arte}
+Bitcoin es una moneda digital creada en 2009 por una persona bajo el alias Satoshi Nakamoto. Puede usarse para comprar o vender artículos de personas y empresas que aceptan bitcoins como pago, pero difiere bastante de las divisas tradicionales, principalmente porque no existe como moneda física. No hay monedas ni billetes reales. Sólo existe en línea. Las monedas del "mundo real", como el euro, son administradas por un banco central como la que se ocupa de gestionar la oferta de dinero para mantener los precios constantes. Pueden imprimir más dinero o retirar algo de la circulación si creen que es necesario, así como utilizar otros controles de la política monetaria, como el ajuste de las tasas de interés. Pero Bitcoin no tiene un banco central y no está vinculado ni regulado por ningún estado.
+
+\subsection{Aporte de los artículos }
+Más que ser una moneda digital, bitcoin es una red de pagos, cuyo objetivo es servir de "dinero efectivo digital". También se denomina Bitcoin a su protocolo. Entre las características del bitcoin están: la descentralización, la transparecia y que es una moneda deflacionaria y NO anónima.
+
+\subsection{Mención de Articulos}
+Más que ser una moneda digital, bitcoin es una red de pagos, cuyo objetivo es servir de "dinero efectivo digital". También se denomina Bitcoin a su protocolo. Entre las características del bitcoin están: la descentralización, la transparecia y que es una moneda deflacionaria y NO anónima.
+
+\subsection{Metodología}
+Más que ser una moneda digital, bitcoin es una red de pagos, cuyo objetivo es servir de "dinero efectivo digital". También se denomina Bitcoin a su protocolo. Entre las características del bitcoin están: la descentralización, la transparecia y que es una moneda deflacionaria y NO anónima.
+
+
+\section{Diseño del experimento}
+Una de las formas más sencillas de crear un monedero es usar la web Bitaddress.org (toca en el botón Español, para traducirla). Esta página genera una dirección Bitcoin aleatoria, y su clave asociada. Seguramente te habrás dado cuenta de que estamos usando el ordenador para crear el monedero. 
+\\ \\
+%% para poner en negro     \textbf{¿Pero no íbamos a usar papel?} \\
+Hay que empezar así, porque la dirección Bitcoin está asociada a su clave privada por una fórmula matemática muy compleja, que no se puede calcular a mano. Bitadress.org es un proyecto de código libre, puedes coger su código y analizarlo, y verás que no espía estas direcciones. Si tienes el ordenador libre de virus, el proceso es seguro. Aún así, para mejorar aún más la seguridad puedes bajarte el código ejecutable de Bitaddress.org desde Github, arrancar el ordenador con una distro de Linux como Ubuntu, libre de virus, desconectar el ordenador de Internet, ejecutar el código de Bitaddress en Linux sin conexión, y crear el monedero. Uses uno u otro método, verás algo como esto:
+
+\section{Experimentos y resultados}
+Una de las formas más sencillas de crear un monedero es usar la web Bitaddress.org (toca en el botón Español, para traducirla). Esta página genera una dirección Bitcoin aleatoria, y su clave asociada. Seguramente te habrás dado cuenta de que estamos usando el ordenador para crear el monedero. 
+
+\section{Discusiones}
+Una de las formas más sencillas de crear un monedero es usar la web Bitaddress.org (toca en el botón Español, para traducirla). Esta página genera una dirección Bitcoin aleatoria, y su clave asociada. Seguramente te habrás dado cuenta de que estamos usando el ordenador para crear el monedero. 
+
+\section{Conclusiones y trabajos futuros.}
+Una de las formas más sencillas de crear un monedero es usar la web Bitaddress.org (toca en el botón Español, para traducirla). Esta página genera una dirección Bitcoin aleatoria, y su clave asociada. Seguramente te habrás dado cuenta de que estamos usando el ordenador para crear el monedero.
+
+\section{Conclusiones y trabajos futuros.}
+Una de las formas más sencillas de crear un monedero es usar la web Bitaddress.org (toca en el botón Español, para traducirla). Esta página genera una dirección Bitcoin aleatoria, y su clave asociada. Seguramente te habrás dado cuenta de que estamos usando el ordenador para crear el monedero.
+
+
+
+\newpage
+\section{Bibliografía y referencias}
+
+\begin{itemize}
+    \item \url{https://www.bbva.com/es/criptomonedas-sirven-las-monedas-virtuales/}
+    \item \url{https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0719-25842019000100029}
+    \item \url{https://criptomoneda.ninja/bitcoin/}
+    \item \url{https://www.bbc.com/mundo/noticias-57066481}
+    \item \url{https://especiales.dinero.com/bitcoin/index.html}
+    \item \url{https://en.wikipedia.org/wiki/Bitcoin}
+\end{itemize}
 \end{document}
+
+%para imagenes 
+%       \begin{figure}[H]
+%       \centering
+%       \includegraphics[scale=0.95]{3.png}
+%       %\caption{Vista activity-main.xml}
+%       \end{figure}
