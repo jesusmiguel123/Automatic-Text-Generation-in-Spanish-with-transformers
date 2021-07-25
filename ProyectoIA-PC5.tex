@@ -1,4 +1,4 @@
-﻿%\documentclass[11pt,twocolumn,spanish]{article} 
+%\documentclass[11pt,twocolumn,spanish]{article} 
 \documentclass[10pt,twocolumn]{article}
 \usepackage[spanish,english]{babel}
 \usepackage{indentfirst}
@@ -130,14 +130,40 @@ Es una API la cual podría detectar emociones y responder preguntas según el co
 \end{itemize}
 
 \subsection{Estado del arte}
-falta
+\subsubsection{Attention Is All You Need}
+Autor:Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin.\\ 
+Tema: “Transformer, primer modelo de transducción de secuencia”
+\subsubsection{Fast Transformer Decoding: One write-head is all you need}
+Autor: Noam Shazeer. \\
+Tema: “Las capas de atención de múltiples de cabezales, y cuál es su utilidad en el modelo secuencial neuronal Transformer”.
+\subsubsection{Enhanced Transformer Model for Data-to-Text Generation}
+Autor: Li Gong, Josep Crego, Jean Senellart. \\
+Tema: “Nuevo modelo de generación de datos a texto basado en Transformer”.
 
 \subsection{Aportes }
-falta
+\begin{itemize}
+    \item Attention Is All You Need: Se demostró que el transformer generaliza bien en distintas tareas y que se puede entrenar mucho más rápido, en comparación a las distintas arquitecturas basadas en capas convolucionales o recurrentes.
+
+    \item Fast Transformer Decoding: One write-head is all you need: Una adaptación amplia acerca de modelos de secuencia, centrados en lo que concierne a la atención  en aplicaciones críticas de rendimiento de inferencia.
+
+    \item Enhanced Transformer Model for Data-to-Text Generation: Dos modificaciones en el modelo Transformer mejoran significativamente las métricas de evaluación orientadas al contenido.   
+
+\end{itemize}
 
 \subsection{Metodología}
-falta
-
+Implementaremos distintos métodos de decodificación para su posterior estudio y efectividad en la obtención de texto que estamos analizando.
+\subsubsection{Instalando librerias}
+Instalaremos la librería “transformers” para la utilización de algunos de sus métodos importantes para el proyecto que realizamos.\\
+Importamos la librería torch, además de los métodos “AutoTokenizer” y “AutoModelForCausalLM” pertenecientes a la librería “transformers”.
+\subsubsection{Implementación de los "decoders"}
+Implementamos varios métodos de decodificación, y analizaremos cada uno de ellos:
+\begin{itemize}
+    \item Búsqueda Greedy
+    \item Beam search
+    \item Sampling   
+    \item Top-k Sampling  
+    \item Top-p Sampling  
+\end{itemize}
 
 \section{Diseño del experimento}
 
@@ -181,7 +207,7 @@ Ahora, comparando con nuestros resultados obtenidos: \\
     \item Usando el método Top-k Sampling notamos que el texto es mucho más humano, sin embargo no parece ser la mejor técnica, aun así produce un buen resultado.
     \item Utilizando el método Top-p Sampling se puede generar texto con un nivel de coherencia aceptable, además notamos que a diferencia de las secuencias generadas en beam search los resultados son diferentes y más impredecibles.
     \item Entre las cinco pruebas hechas podemos concluir que los mejores métodos a utilizar serian Top-k Sampling y Top-p Sampling
-    \item Se demostró que los métodos de sampling son mejores que los métodos de búsqueda en el momento de generación de texto. En el sentido de que genera texto más realista y con menos repeticiones.
+
 \end{itemize}
 
 \newpage
@@ -203,4 +229,3 @@ Ahora, comparando con nuestros resultados obtenidos: \\
 %       \includegraphics[scale=0.95]{3.png}
 %       %\caption{Vista activity-main.xml}
 %       \end{figure}
-
