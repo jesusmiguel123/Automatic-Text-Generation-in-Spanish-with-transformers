@@ -22,6 +22,14 @@
 \usepackage[spanish,es-tabla]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{subcaption}
+
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{hyperref}
+
+
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand*\contentsname{Summary}
 \renewcommand{\thepage}{}
@@ -142,11 +150,11 @@ Tema: “Nuevo modelo de generación de datos a texto basado en Transformer”.
 
 \subsection{Aportes }
 \begin{itemize}
-    \item Attention Is All You Need: Se demostró que el transformer generaliza bien en distintas tareas y que se puede entrenar mucho más rápido, en comparación a las distintas arquitecturas basadas en capas convolucionales o recurrentes.
+    \item Attention Is All You Need\cite{b3}: Se demostró que el transformer generaliza bien en distintas tareas y que se puede entrenar mucho más rápido, en comparación a las distintas arquitecturas basadas en capas convolucionales o recurrentes.
 
-    \item Fast Transformer Decoding: One write-head is all you need: Una adaptación amplia acerca de modelos de secuencia, centrados en lo que concierne a la atención  en aplicaciones críticas de rendimiento de inferencia.
+    \item Fast Transformer Decoding: One write-head is all you need\cite{b4}: Una adaptación amplia acerca de modelos de secuencia, centrados en lo que concierne a la atención  en aplicaciones críticas de rendimiento de inferencia.
 
-    \item Enhanced Transformer Model for Data-to-Text Generation: Dos modificaciones en el modelo Transformer mejoran significativamente las métricas de evaluación orientadas al contenido.   
+    \item Enhanced Transformer Model for Data-to-Text Generation\cite{b5}: Dos modificaciones en el modelo Transformer mejoran significativamente las métricas de evaluación orientadas al contenido.   
 
 \end{itemize}
 
@@ -188,7 +196,7 @@ El top-p se define como la probabilidad dentro de un conjunto de datos, en este 
 \section{Experimentos y resultados}
 El trabajo en el que nos basamos es del blog "How to generate text: using different decoding methods for language generation with Transformers" de huggingface. En este se hace la comparación de los métodos de decoding que mencionamos antes: Método de búsqueda Greedy, beam search, Top-k sampling y Top-p sampling. Para esto ellos usan GPT-2 y tensorflow. Nosotros replicamos estos experimentos, pero usando "GPT-2 small spanish", una versión en español de GPT-2 small. También usamos una API de transformers creado por Hugging Face, y por último usamos Pytorch. \\
 Sobre los experimentos realizados con cada método en el blog original, llegan a la conclusión que no existe un mejor método para todos los casos, sino que dependerá de muchos factores, como por ejemplo el modelo de transformer que utilizas, y especialmete cómo está entrenado este modelo. \\
-Ahora, comparando con nuestros resultados obtenidos: \\
+
 
 \section{Discusiones}
 \begin{itemize}
@@ -210,17 +218,25 @@ Ahora, comparando con nuestros resultados obtenidos: \\
 
 \end{itemize}
 
-\newpage
-\section{Bibliografía y referencias}
+\vspace{0.2cm}
 
-\begin{itemize}
-    \item \url{https://tc-arg.tk/pdfs/2020/greedy.pdf}
-    \item \url{https://d2l.ai/chapter_recurrent-modern/beam-search.html}
-    \item \url{3}
-    \item \url{4}
-    \item \url{5}
-    \item \url{6}
-\end{itemize}
+%\section{Referencias}
+\begin{thebibliography}{00}
+
+\bibitem{b1} Vocabulario RDF:\\ \href{https://tc-arg.tk/pdfs/2020/greedy.pdf}{https://tc-arg.tk/pdfs/2020/greedy.pdf}. 
+
+\bibitem{b2} P\'agina generadora del grafo RDF, mediante c\'odigo XML: \href{https://d2l.ai/chapter_recurrent-modern/beam-search.html}{https://d2l.ai/chapter_recurrent-modern/beam-search.html}.
+
+\bibitem{b3} Attention  Is  All  You  Need:\\ \href{https://arxiv.org/pdf/1706.03762.pdf}{https://arxiv.org/pdf/1706.03762.pdf}. 
+
+\bibitem{b4} Fast  Transformer  Decoding:\\ \href{https://arxiv.org/pdf/1911.02150.pdf}{https://arxiv.org/pdf/1911.02150.pdf}. 
+
+\bibitem{b5} Enhanced  Transformer  Model  for  Data-to-TextGeneration:\\ \href{https://aclanthology.org/D19-5615.pdf}{https://aclanthology.org/D19-5615.pdf}. 
+
+
+\end{thebibliography}
+
+
 \end{document}
 
 %para imagenes 
