@@ -107,20 +107,28 @@ Encryption is the process by which information is converted into another accepta
 
 \section{Introducción}
 
-\subsection{Presentación}
-\begin{itemize}
-    \item dsdsdsds
+\subsection{Planteamiento del problema}
+El hacer que una maquina pueda ser capaz de interpretar lo que le dicen o escriben, ha sido un problema de la comprensión automático, pero a partir de 1960 surgen los primero Procesamientos de lenguaje natural los cuales han ido mejorando con el pasar del tiempo.  El problema de los últimos años es saber cuál de los últimos métodos utilizados para decodificación es el más óptimo, por lo que usaremos varios métodos para hacer pruebas, además de se evaluará y comparará la calidad del texto que producen, para ello usaremos la librería torch, también usaremos un modelador de lenguaje en español basado del conocido generador de texto GPT-2, en adición se utilizará una API de transformers realizada por Hugging Face.
 
-   
-\end{itemize}
+\subsubsection{Torch}
+Es una biblioteca de código abierto para aprendizaje automático, un marco de computación científica, y un lenguaje de script basado en el lenguaje de programación Lua(lenguaje multiparadigma, imperativo y estructurado).Proporciona una amplia gama de algoritmos de aprendizaje profundo, y usa el lenguaje de script LuaJIT, sobre una implementación en C.
+
+\subsubsection{GPT-2}
+Es tan sólo el último hito en el campo del PNL (procesamiento de lenguaje natural), es una inteligencia artificial de código abierto creada por OpenAI en febrero de 2019. GPT-2 traduce texto, responde preguntas, resume pasajes, y genera una salida de texto en un nivel que, aunque a veces no se puede distinguir del de los humanos,  puede volverse repetitivo o sin sentido al generar pasajes largos.
+
+\subsubsection{Hugging Face}
+Es una API la cual podría detectar emociones y responder preguntas según el contexto y las emociones. Hugging Face tiene como objetivo convertirse en GitHub para el aprendizaje automático, es además una de las startups líderes en el espacio de la PNL.
 
 \subsection{Objetivos}
 % para otras secciones .....\subsubsection{Presentación2}
+% para que tenga items \begin{itemize} ---  \end{itemize}
 \begin{itemize}
-    \item aqui
-    \item aqui
-    \item aqui
+    \item Poner a prueba algunos métodos de decodificación y observar su funcionamiento.
+    \item Implementar con la ayuda de la librería torch, los métodos de decodificación elegidos.
+    \item Comprender el funcionamiento de los diferentes métodos y evaluar cuál de ellos procesan una mejor calidad de texto.   
+
 \end{itemize}
+
 
 \subsection{Organización del informe}
 falta
@@ -161,21 +169,29 @@ El top-p se define como la probabilidad dentro de un conjunto de datos, en este 
 falta
 
 \section{Discusiones}
-falta
+\begin{itemize}
+    \item Respecto a la búsqueda Greedy, en el método tokenizer.decode transforma un tensor de ids al vocabulario (texto entendible para las personas), como parámetros opcionales especificamos obviar caracteres especiales como classifiers o separators.
+    \item Para el método Beam search, el texto no es tan espontáneo ni natural como el de los humanos, para ello se introducirá aleatoriedad.
+    \item En el método Sampling existen incoherencias en el significado, para ello utilizaremos otro método para filtrar que palabras se deben escoger.  
+    \item Para el ejemplo tratado con Top-p Sampling, si queremos minizimar el número de palabras y maximizar la probabilidad acumulada iremos escogiendo las palabras con mayor probabilidad hasta llegar a superar la probabilidad p.
+    
+\end{itemize}
 
-\section{Conclusiones y trabajos futuros.}
-falta
+\section{Conclusiones}
+\begin{itemize}
+    \item Usando el método de búsqueda Greedy,notamos que caemos fácilmente en repeticiones lo cual no nos resulta tan útil.
+    \item Al usar el método Beam search podemos observar que hemos mejorado un poco con respecto a greedy Search pero aún el texto no es tan espontáneo ni natural como el de los humanos, 
+    \item Al usar el método Sampling se puede ver que el texto es un poco más impredecible, pero existen incoherencias en el significado.
+    \item Usando el método Top-k Sampling notamos que el texto es mucho más humano, sin embargo no parece ser la mejor técnica, aun así produce un buen resultado.
+    \item Utilizando el método Top-p Sampling se puede generar texto con un nivel de coherencia aceptable, además notamos que a diferencia de las secuencias generadas en beam search los resultados son diferentes y más impredecibles.
+    \item Entre las cinco pruebas hechas podemos concluir que los mejores métodos a utilizar serian Top-k Sampling y Top-p Sampling
 
-\section{Conclusiones y trabajos futuros.}
-falta
-
-
+\end{itemize}
 
 \newpage
 \section{Bibliografía y referencias}
 
 \begin{itemize}
-
     \item \url{https://www.bbva.com/es/criptomonedas-sirven-las-monedas-virtuales/}
     \item \url{https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0719-25842019000100029}
     \item \url{https://criptomoneda.ninja/bitcoin/}
