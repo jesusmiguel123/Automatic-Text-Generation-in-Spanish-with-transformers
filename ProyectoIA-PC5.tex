@@ -160,7 +160,9 @@ El top-k se define como los k elementos más frecuentes dentro de un conjunto de
 El top-p se define como la probabilidad dentro de un conjunto de datos, en este caso el método va a definir una probabilidad p, entonces se escogerá el subconjunto de menor tamaño de palabras de tal manera que su probabilidad acumulada sea mayor a p.
 
 \section{Experimentos y resultados}
-falta
+El trabajo en el que nos basamos es del blog "How to generate text: using different decoding methods for language generation with Transformers" de huggingface. En este se hace la comparación de los métodos de decoding que mencionamos antes: Método de búsqueda Greedy, beam search, Top-k sampling y Top-p sampling. Para esto ellos usan GPT-2 y tensorflow. Nosotros replicamos estos experimentos, pero usando "GPT-2 small spanish", una versión en español de GPT-2 small. También usamos una API de transformers creado por Hugging Face, y por último usamos Pytorch. \\
+Sobre los experimentos realizados con cada método en el blog original, llegan a la conclusión que no existe un mejor método para todos los casos, sino que dependerá de muchos factores, como por ejemplo el modelo de transformer que utilizas, y especialmete cómo está entrenado este modelo. \\
+Ahora, comparando con nuestros resultados obtenidos: \\
 
 \section{Discusiones}
 \begin{itemize}
